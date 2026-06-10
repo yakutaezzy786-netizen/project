@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BrainOrbit</title>
+
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="topbar">
+
+    <img
+    src="ASSETS/img/Logo.png"
+    alt="BrainOrbit Logo"
+    class="logo">
+
+    <h2 id="welcomeText">
+            Welcome
+    </h2>
+
+    <h1>Dashboard</h1>
+
+</header>
+
+        <p class="subtitle">
+            Ready to continue your academic journey?
+        </p>
+
+
+    <div class="stats">
+
+        <div class="card semester">
+
+            <h3>📚 Semesters</h3>
+
+            <p id="semesterCount">
+                0
+            </p>
+
+            <span>
+                Semesters Added
+            </span>
+
+        </div>
+
+        <div class="card subject">
+
+            <h3>📝 Subjects</h3>
+
+            <p id="subjectCount">
+                0
+            </p>
+
+            <span>
+                Subjects Added
+            </span>
+
+        </div>
+
+        <div class="card exam">
+
+            <h3>📅 Exams</h3>
+
+            <p id="examCount">
+                0
+            </p>
+
+            <span>
+                Upcoming Exams
+            </span>
+
+        </div>
+
+    </div>
+
+    <button id="addSemesterBtn">
+        + Add Semester
+    </button>
+    <div id="semesterList"></div>
+
+</div>
+
+<script src="JS/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#041326;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    padding:30px;
+    text-align:center;
+}
+
+.logo{
+    width:180px;
+}
+
+header{
+    margin-bottom:40px;
+}
+
+header h2{
+    margin-top:10px;
+}
+
+.subtitle{
+    color:#b8c5d6;
+    margin-top:8px;
+}
+
+.stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin:40px 0;
+}
+
+.card{
+
+    width:220px;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.semester{
+    background:#1d4ed8;
+}
+
+.subject{
+    background:#7c3aed;
+}
+
+.exam{
+    background:#0891b2;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.card span{
+
+    font-size:14px;
+}
+
+button{
+
+    padding:14px 28px;
+
+    background:#27B4FF;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+button:hover{
+    background:#3D8DFF;
+}
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 20px;
+
+    background:#0b1f3a;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+}
+
+.topbar h1{
+
+    color:#27B4FF;
+
+    font-size:28px;
+}
+
+.logo{
+
+    width:120px;
+    border-radius:10px;
+}
+
+#semesterList{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.semester-card{
+
+    background:#0b1f3a;
+
+    padding:20px;
+
+    width:220px;
+
+    border-radius:12px;
+
+    border-left:5px solid #27B4FF;
+
+    text-align:left;
+}
+
+#semesterList{
+    margin-top:30px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.semester-card{
+
+    width:250px;
+
+    background:#0b1f3a;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    border-left:5px solid #27B4FF;
+}
+
+.semester-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.delete-icon{
+
+    cursor:pointer;
+
+    font-size:20px;
+}
+
+.delete-icon:hover{
+
+    transform:scale(1.2);
+}
