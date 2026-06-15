@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Semester</title>
+
+    <link rel="stylesheet"
+        href="CSS/semester.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="topbar">
+
+            <a href="dashboard.html" class="back-btn">
+                ← Back
+            </a>
+
+            <h1 id="semesterName">
+                Semester
+            </h1>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+
+                <h2 id="subjectCount">
+                    0
+                </h2>
+
+                <p>Subjects</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="examCount">
+                    0
+                </h2>
+
+                <p>Upcoming Exams</p>
+
+            </div>
+
+        </div>
+
+        <!-- Add Subject -->
+
+        <div class="subject-section">
+
+            <h2>Subjects</h2>
+
+            <div class="form-group">
+
+                <input
+                    type="text"
+                    id="subjectInput"
+                    placeholder="Subject Name">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="examDate">Exam Date</label>
+    <input
+        type="date"
+        id="examDate">
+
+            </div>
+
+            <div class="form-group">
+
+                 <label for="priority">Priority</label>
+    <select id="priority">
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+
+            </div>
+
+            <button id="addSubjectBtn">
+
+                Add Subject
+
+            </button>
+
+        </div>
+
+        <!-- Subject Cards -->
+
+        <div id="subjectList">
+
+        </div>
+
+        <!-- Revision Button -->
+
+        <button
+            class="revision-btn"
+            onclick="openRevision()">
+
+            Generate Revision Plan
+
+        </button>
+
+    </div>
+
+    <!-- Message Modal -->
+
+<div id="messageModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3 id="messageText">
+            Message
+        </h3>
+
+        <button id="messageOkBtn">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Delete Modal -->
+
+<div id="deleteModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>
+
+            Delete Subject?
+
+        </h3>
+
+        <p>
+
+            This action cannot be undone.
+
+        </p>
+
+        <div class="modal-buttons">
+
+            <button
+            id="cancelDeleteBtn">
+
+                Cancel
+
+            </button>
+
+            <button
+            id="confirmDeleteBtn">
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="JS/semester.js"></script>
+
+</body>
+
+</html>

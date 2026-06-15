@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Planner</title>
+    <link rel="stylesheet" href="CSS/revision.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+        <a href="semester.html" class="back-btn">← Back</a>
+
+        <h1>Revision Planner</h1>
+
+        <button id="notificationBtn" class="bell-btn">
+            🔔
+        </button>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <!-- Focus Subject -->
+        <div class="card">
+            <h2>⭐ Focus Subject</h2>
+            <div id="focusSubject"></div>
+        </div>
+
+        <!-- Study Streak -->
+        <div class="card">
+            <h2>🔥 Study Streak</h2>
+            <h3 id="streakCount">1 Day</h3>
+        </div>
+
+        <!-- Motivation -->
+        <div class="card">
+            <h2>💡 Important Note</h2>
+            <div class="input-group">
+            <label for="notes">Notes</label>
+            <textarea
+                id="notes"
+                placeholder="Write your notes here..."
+                rows="6"
+                ></textarea>
+        </div>
+            
+        </div>
+
+        <!-- Progress -->
+        <div class="card">
+            <h2>📈 Today's Progress</h2>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <p id="progressText">0%</p>
+        </div>
+
+        <!-- Tasks -->
+        <div class="card">
+            <h2>✅ Today's Tasks</h2>
+
+            <div id="taskList"></div>
+        </div>
+
+        <!-- Weekly Summary -->
+        <div class="card">
+            <h2>📊 Weekly Summary</h2>
+
+            <div id="weeklySummary"></div>
+        </div>
+
+        <!-- Quick Revision -->
+        <div class="card">
+            <h2>🎲 Quick Revision</h2>
+
+            <p id="randomSubject"></p>
+
+            <button id="pickSubjectBtn">
+                Pick Another
+            </button>
+        </div>
+
+        <!-- Timer -->
+        <div class="card">
+            <h2>⏱ Study Timer</h2>
+
+            <h1 id="timerDisplay">
+                25:00
+            </h1>
+
+            <div class="timer-buttons">
+
+                <button id="startBtn">
+                    Start
+                </button>
+
+                <button id="pauseBtn">
+                    Pause
+                </button>
+
+                <button id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Notification Modal -->
+
+<div id="notificationModal" class="modal">
+
+    <div class="modal-box">
+
+        <h2>🔔 Notifications</h2>
+
+        <div id="notificationList"></div>
+
+        <button onclick="closeNotifications()">
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+<script src="JS/revision.js"></script>
+
+</body>
+</html>

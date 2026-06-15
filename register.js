@@ -1,49 +1,74 @@
+function showPopup(message){
+
+    document
+    .getElementById(
+    "popupMessage"
+    )
+    .innerText =
+    message;
+
+    document
+    .getElementById(
+    "popup"
+    )
+    .style.display =
+    "flex"; 
+}
+
 document
-.getElementById("registerBtn")
-.addEventListener("click", () => {
+.getElementById(
+"registerBtn"
+)
+.addEventListener(
+"click",
+()=>{
 
     const name =
-    document.getElementById("name").value.trim();
+    document
+    .getElementById(
+    "name"
+    )
+    .value;
 
     const email =
-    document.getElementById("email").value.trim();
+    document
+    .getElementById(
+    "email"
+    )
+    .value;
 
     const password =
-    document.getElementById("password").value.trim();
-
-    // Empty Fields Validation
-    if(name === "" || email === "" || password === ""){
-        alert("Please fill all fields");
-        return;
-    }
-
-    // Email Validation
-    const emailPattern =
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if(!emailPattern.test(email)){
-        alert("Please enter a valid email address");
-        return;
-    }
-
-    // Password Length Validation
-    if(password.length < 6){
-        alert("Password must be at least 6 characters long");
-        return;
-    }
+    document
+    .getElementById(
+    "password"
+    )
+    .value;
 
     const user = {
+
         name,
         email,
         password
+
     };
 
-    localStorage.setItem(
-        "user",
-        JSON.stringify(user)
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    showPopup(
+    "Registration Successful!"
     );
 
-    alert("Registration Successful!");
+});
+
+document
+.getElementById(
+"popupBtn"
+)
+.addEventListener(
+"click",
+()=>{
 
     window.location.href =
     "login.html";

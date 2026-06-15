@@ -13,31 +13,96 @@
 
         <h1>Login</h1>
 
-        <input
-            type="email"
-            id="email"
-            placeholder="Email">
+        <!-- LOGIN SECTION -->
+        <div id="loginSection">
 
-        <input
-            type="password"
-            id="password"
-            placeholder="Password">
+            <input type="email" id="email" placeholder="Email">
 
-        <button id="loginBtn">
-            Login
-        </button>
+            <input type="password" id="password" placeholder="Password">
 
-        <p>
-            Don't have an account?
+            <button id="loginBtn">Login</button>
 
-            <a href="register.html">
-                Register
-            </a>
-        </p>
+            <p>
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+            <p class="forgot" id="forgotToggle">
+                Forgot Password?
+            </p>
+
+        </div>
+
+        <!-- FORGOT PASSWORD SECTION -->
+        <div id="forgotSection">
+
+            <h3 class="reset-title">
+                Reset Password
+            </h3>
+
+            <input type="text" id="forgotEmail" placeholder="Enter registered email">
+
+            <button id="verifyBtn">Verify Account</button>
+
+            <div id="otpBox">
+
+    <input
+    type="text"
+    id="otpInput"
+    placeholder="Enter OTP">
+
+    <button id="verifyOtpBtn">
+
+        Verify OTP
+
+    </button>
+
+</div>
+
+            <div id="resetBox">
+
+                <input type="password" id="newPass" placeholder="New Password">
+
+                <input type="password" id="confirmPass" placeholder="Confirm Password">
+
+                <button id="resetBtn">Reset Password</button>
+
+            </div>
+
+            <p class="forgot" id="backToLogin">
+                Back to Login
+            </p>
+
+        </div>
 
     </div>
 
+    <!-- POPUP -->
+    <div id="popupOverlay" class="popup-overlay">
+
+        <div class="popup-box">
+
+            <h3 id="popupTitle">Message</h3>
+
+            <p id="popupMessage">Something happened</p>
+
+            <button id="popupBtn">OK</button>
+
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("7Zk6RixiJQi-GFExu");
+</script>
+
+<script src="JS/login.js"></script>    
+
 <script src="JS/login.js"></script>
+
+
 
 </body>
 </html>

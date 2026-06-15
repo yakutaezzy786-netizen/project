@@ -3,88 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | BrainOrbit</title>
+    <title>BrainOrbit Dashboard</title>
 
     <link rel="stylesheet" href="CSS/dashboard.css">
 </head>
 <body>
 
-<div class="container">
+    <!-- NAVBAR -->
 
-    <header class="topbar">
+    <nav class="navbar">
 
-    <img
-    src="ASSETS/img/Logo.png"
-    alt="BrainOrbit Logo"
-    class="logo">
+    <div class="logo">
+        🧠 BrainOrbit
+    </div>
 
-    <h2 id="welcomeText">
-            Welcome
-    </h2>
+    <div class="navbar-actions">
 
-    <h1>Dashboard</h1>
+    <button id="themeToggle" class="theme-btn">
+        🌙
+    </button>
 
-</header>
+    <button id="logoutBtn" class="add-btn">
+        Logout
+    </button>
 
-        <p class="subtitle">
-            Ready to continue your academic journey?
-        </p>
+</div>
 
+</nav>
 
-    <div class="stats">
+    <!-- HERO -->
 
-        <div class="card semester">
+    <section class="hero">
 
-            <h3>📚 Semesters</h3>
+        <div class="hero-left">
 
-            <p id="semesterCount">
-                0
+            <h1 id="welcomeText">
+                Welcome Back 👋
+            </h1>
+
+            <p class="subtitle">
+                Organize your semesters, subjects and exams in one place.
             </p>
-
-            <span>
-                Semesters Added
-            </span>
 
         </div>
 
-        <div class="card subject">
+        <div class="hero-right">
 
-            <h3>📝 Subjects</h3>
+            <div class="hero-card">
 
-            <p id="subjectCount">
-                0
-            </p>
+                <h3 id="semesterCountHero">
+                    0
+                </h3>
 
-            <span>
-                Subjects Added
-            </span>
+                <span>Semesters</span>
+
+            </div>
+
+            <div class="hero-card">
+
+                <h3 id="subjectCountHero">
+                    0
+                </h3>
+
+                <span>Subjects</span>
+
+            </div>
+
+            <div class="hero-card">
+
+                <h3 id="examCountHero">
+                    0
+                </h3>
+
+                <span>Upcoming Exams</span>
+
+            </div>
 
         </div>
 
-        <div class="card exam">
+    </section>
 
-            <h3>📅 Exams</h3>
+    <!-- TODAY FOCUS -->
 
-            <p id="examCount">
-                0
+    <section class="focus-section">
+
+        <div class="section-header">
+            Today's Focus
+        </div>
+
+        <div class="focus-card">
+
+            <h2 id="todayFocus">
+                0 Subjects • 0 Exams
+            </h2>
+
+        </div>
+
+    </section>
+
+    <!-- UPCOMING EXAMS -->
+
+    <section class="preview-section">
+
+        <div class="section-header">
+            Upcoming Exams
+        </div>
+
+        <div id="examPreview" class="preview-grid">
+
+        </div>
+
+    </section>
+
+    <!-- SEMESTERS -->
+
+<section class="semester-section">
+
+    <div class="semester-header-card">
+
+        <div>
+      
+            <h2>My Semesters</h2>
+          
+            <p>
+                Manage all your semester workspaces
             </p>
 
-            <span>
-                Upcoming Exams
-            </span>
+        </div>
+
+        <button
+        id="addSemesterBtn"
+        class="add-btn">
+
+            + New Semester
+
+        </button>
+
+    </div>
+
+    <div
+    id="semesterList"
+    class="semester-grid">
+
+    </div>
+
+</section>
+
+    <!-- ADD SEMESTER MODAL -->
+
+    <div
+    id="semesterModal"
+    class="modal">
+
+        <div class="modal-box">
+
+            <h2>
+                Create Semester
+            </h2>
+
+            <input
+            type="text"
+            id="semesterInput"
+            placeholder="Semester Name">
+
+            <div class="modal-actions">
+
+                <button
+                id="closeModalBtn"
+                class="secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                id="saveSemesterBtn"
+                class="primary-btn">
+
+                    Save
+
+                </button>
+
+            </div>
 
         </div>
 
     </div>
 
-    <button id="addSemesterBtn">
-        + Add Semester
-    </button>
-    <div id="semesterList"></div>
+    <!-- DELETE MODAL -->
 
-</div>
+    <div
+    id="deleteModal"
+    class="modal">
 
-<script src="JS/dashboard.js"></script>
+        <div class="modal-box">
+
+            <h2>
+                Delete Semester?
+            </h2>
+
+            <p>
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                id="cancelDeleteBtn"
+                class="secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                id="confirmDeleteBtn"
+                class="danger-btn">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="JS/dashboard.js"></script>
+    
 
 </body>
 </html>
